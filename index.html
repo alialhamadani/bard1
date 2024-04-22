@@ -4,8 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon | Apple Products</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: linear-gradient(to right, #f7cace, #e0c3f9);
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav li {
+            margin-right: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        #search-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 50px;
+        }
+
+        .product-showcase {
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+        }
+
+        article.product {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        article.product img {
+            width: 100%;
+            /* Adjust height as needed */
+        }
+
+        article.product h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        article.product p {
+            margin: 10px 0;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function validateSearch() {
+            var searchTerm = document.getElementById("search-box").value;
+            if (searchTerm.trim() === "") {
+                alert("Please enter a search term!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -22,44 +146,4 @@
                     <button type="submit">Find</button>
                 </form>
             </div>
-        </div>
-    </header>
-    <main>
-        <section class="product-showcase">
-            <h2>Apple Products</h2>
-            <div class="product-container">
-                <article class="product">
-                    <img src="images/iphone.jpg" alt="iPhone">
-                    <h3>iPhone 14</h3>
-                    <p>The next generation of iPhone featuring a powerful A16 Bionic chip, a stunning Super Retina XDR display, and an advanced camera system.</p>
-                    <div class="details">
-                        <span class="price">$1099</span>
-                        <a href="#">Learn More</a>
-                    </div>
-                </article>
-                <article class="product">
-                    <img src="images/macbook.jpg" alt="MacBook Pro">
-                    <h3>MacBook Pro</h3>
-                    <p>Supercharged by the M2 chip, the new MacBook Pro delivers incredible performance for professionals.</p>
-                    <div class="details">
-                        <span class="price">$1999</span>
-                        <a href="#">Learn More</a>
-                    </div>
-                </article>
-                <article class="product">
-                    <img src="images/ipad.jpg" alt="iPad Air">
-                    <h3>iPad Air</h3>
-                    <p>With the powerful M1 chip, the iPad Air delivers a versatile experience for work, play, and creativity.</p>
-                    <div class="details">
-                        <span class="price">$599</span>
-                        <a href="#">Learn More</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Amazon.com, Inc. or its affiliates</p>
-    </footer>
-</body>
-</html>
+        </div
