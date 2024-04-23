@@ -3,147 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon | Apple Products</title>
+    <title>Amazon Apple Products</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: linear-gradient(to right, #f7cace, #e0c3f9);
+            background-color: linear-gradient(#f0f8ff, #d6e4ff);
         }
 
         header {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
         }
 
-        header h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        header h1 a {
+        nav a {
+            margin: 0 10px;
             text-decoration: none;
-            color: #000;
+            color: #fff;
         }
 
-        header nav {
-            display: flex;
+        nav a:hover {
+            color: #ccc;
         }
 
-        header nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header nav li {
-            margin-right: 20px;
-        }
-
-        header nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        #search-box {
-            padding: 10px;
-            border: 1px solid #ccc;
+        .buttons button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
+            background-color: #f05a28;
+            color: #fff;
+            cursor: pointer;
         }
 
         main {
-            padding: 50px;
-        }
-
-        .product-showcase {
-            text-align: center;
-        }
-
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 20px auto;
-        }
-
-        article.product {
-            width: 25%;
-            background-color: #fff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        article.product img {
-            width: 100%;
-            /* Adjust height as needed */
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
         }
 
-        article.product h3 {
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
-
-        article.product p {
-            margin: 10px 0;
+        .product img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
 
         .details {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             margin-top: 10px;
-        }
-
-        .price {
-            font-weight: bold;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f2f2f2;
+            background-color: #eee;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f05a28;
+            color: #fff;
+            cursor: pointer;
         }
     </style>
-    <script>
-        function validateSearch() {
-            var searchTerm = document.getElementById("search-box").value;
-            if (searchTerm.trim() === "") {
-                alert("Please enter a search term!");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <h1><a href="#">Amazon</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <form action="#" onsubmit="return validateSearch()"> <input type="text" name="search" id="search-box" placeholder="Search for Apple Products">
-                    <button type="submit">Find</button>
-                </form>
+        <h1>Amazon</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+        </nav>
+        <div class="buttons">
+            <button>Sign In</button>
+            <button>Create Account</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Apple Products</h2>
+        <section class="product">
+            <img src="images/iphone.jpg" alt="iPhone">
+            <h3>iPhone 14</h3>
+            <p>Experience the power and speed of the A16 Bionic chip. Capture stunning photos and videos with the all-new dual-camera system. Enjoy a seamless user experience with iOS 17. Available in various colors.</p>
+            <div class="details">
+                <h4>Starting at: $799</h4>
+                <a href="#">Learn More</a>
             </div>
-        </div
+        </section>
+
+        <section class="product">
+            <img src="images/macbook.jpg" alt="MacBook Pro">
+            <h3>MacBook Pro</h3>
+            <p>Unleash your creativity with the powerful M2 chip. Enjoy a stunning Retina display and a long-lasting battery. The perfect laptop for professionals and creators. Available in various configurations.</p>
+            <
